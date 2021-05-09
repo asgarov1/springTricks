@@ -10,14 +10,14 @@ import javax.annotation.PostConstruct;
 public class PostProcessorApplication {
 
     @Autowired
-    Receipt receipt;
+    private Receipt receipt;
 
     public static void main(String[] args) {
         SpringApplication.run(PostProcessorApplication.class, args);
     }
 
     @PostConstruct
-    public void sth() {
-        System.out.println(receipt.getNumber());
+    public void someMethod() {
+        System.out.println(receipt.getAmount());
     }
 }
